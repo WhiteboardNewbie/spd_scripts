@@ -1,6 +1,6 @@
-;; The first three lines of this file were inserted by DrRacket. They record metadata
-;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-intermediate-reader.ss" "lang")((modname cantor-solution) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+## Cantor Sets
+This exercise in generative recursion culminated in a fancy visualisation of cantor sets. Generating a single cantor set was trivial but adjusting the white space between the bars was fun, worth sharing!
+```
 (require 2htdp/image)
 (require 2htdp/universe)
 
@@ -70,10 +70,8 @@
         [else
          (above (rectangle w LINE-HEIGHT "solid" "blue")
                 (rectangle w SPACE-HEIGHT "solid" "white")
-                (local [(define white-width (/ w (max p 1.1)))
-                        (define sub (cantor-whiter (/ (- w white-width)
-                                                      2)
-                                                   (max p 1.1)))
+                (local [(define white-width (/ w p))
+                        (define sub (cantor (/ (- w white-width) 2)))
                         (define wht (rectangle white-width LINE-HEIGHT "solid" "white"))]
                   (beside sub
                           wht
@@ -104,7 +102,7 @@
 ;; Functions:
 
 ;; X -> X
-;; start the world with (main 0)
+;; start the world with x=0
 ;; 
 (define (main X)
   (big-bang X                  ; X
@@ -118,7 +116,7 @@
 (define (render X)
   (overlay/align "middle"
                  "top"
-                 (cantor-whiter WIDTH (* (/ X WIDTH) 100))          
+                 (cantor-whiter WIDTH (/ X (* WIDTH 10)))              
                  MTS))
 
 ;; X Integer Integer MouseEvent -> X
@@ -127,3 +125,5 @@
   (cond [(mouse=? me "move") x]
         [else
          X]))
+```
+![Cantor Sets.](/assets/gifs/cantor.gif)
