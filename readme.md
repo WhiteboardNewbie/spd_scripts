@@ -4,6 +4,8 @@ This repository contains my solutions to the **Systematic Program Design** (SPD)
 
 **.rkt** files can be opened with the Dr. Racket IDE.
 
+Certain Programs of interest are documented in folders **3b**, **4b**,  **5b**, **9a**. 
+
 ---
 
 ##  Course Overview
