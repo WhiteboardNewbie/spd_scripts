@@ -79,5 +79,6 @@ The program makes an animation of a rotating water balloon. Pressing Space reset
   (cond [(key=? ke " ") BALLOON1]
         [else 
          b]))
-
 ```
+
+![The water balloon animation.](/assets/gifs/water-balloon.gif)
