@@ -1,4 +1,4 @@
-# [Systematic Program Design (UBCx SPD1x) – Solutions](https://learning.edx.org/course/course-v1:UBCx+SPD1x+2T2015)
+# [Systematic Program Design (UBCx SPD1x)](https://learning.edx.org/course/course-v1:UBCx+SPD1x+2T2015) - Solutions
 
 This repository contains my solutions to the **Systematic Program Design** (SPD) course (UBCx SPD1x, delivered via edX). Otherwise known as **How to Design Programs**, this course, offered by the University of British Columbia, teaches a **design-first approach** to programming using Racket (BSL/ISL) rather than focusing on syntax of a specific language.
 
